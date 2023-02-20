@@ -8,7 +8,7 @@ const Game = () => {
         headers: ["apikey", "MFanPAxcMo4X34mhAR3V2iGdXgEi0Q7P"],
     };
 
-    
+    //https://apilayer.com/marketplace/fixer-api#
 
   return (
     <div className='mt-10'>
