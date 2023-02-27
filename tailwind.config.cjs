@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "navbarBG": '#0a146e',
       }
     },
     screens: {
