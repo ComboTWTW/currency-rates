@@ -8,7 +8,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <nav className="fixed top-0 z-100 w-full bg-navbarBG flex flex-row justify-center">
+    <div className="">
+    <nav className="fixed top-0 z-10 w-full bg-navbarBG flex flex-row justify-center">
         {/* Logo */}
         <div className="relative container flex flex-row justify-between items-center px-4 py-4 md:mx-3">
           <div className="flex flex-row gap-4 items-center">
@@ -22,15 +23,17 @@ const Navbar = () => {
             ))}
           </ul>
         {/* NavbarLinks for Mobile */}
-        <HamburgerBoring barColor='white' className=" md:hidden" buttonWidth={28} isActive={toggle}  toggleButton={() => setToggle(!toggle)}/>
-        {toggle && (
-          <div className={`bg-black absolute ${toggle ? 'top-[72px]' : 'top-[-100px]'} md:hidden`}>
-            <h1 className='text-white'>hellow</h1>
-          </div>
-        )}
-        
+        <HamburgerBoring barColor='white' className=" md:hidden" buttonWidth={28} isActive={toggle}  toggleButton={() => setToggle(!toggle)}/>  
         </div>
     </nav>
+    {toggle && (
+      <div className={`bg-navbarMobile absolute ${toggle ? 'top-[90px]' : 'top-[-100px]'} py-10  left-0 right-0 mx-3 md:hidden flex flex-col items-center gap-10 rounded-[10px]`}>
+        {links.map((link) => (
+          <li className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'>{link.tittle}</li>
+        ))}
+      </div>
+    )}
+    </div>
   )
 }
 

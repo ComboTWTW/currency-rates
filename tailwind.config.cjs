@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         "navbarBG": '#0a146e',
+        "navbarMobile": '#1e293b',
       }
     },
     screens: {
