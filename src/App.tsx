@@ -13,7 +13,6 @@ const App = () => {
             {/* <Game /> */}
           </Routes>
         </div>
-
       </div>
     </Router>
   )
