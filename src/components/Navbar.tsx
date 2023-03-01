@@ -2,6 +2,8 @@ import logo from '../assets/logo.svg'
 import { links } from '../constants/index'
 import { HamburgerBoring } from 'react-animated-burgers'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { navbar } from '../constants/index'
 
 
 const Navbar = () => {
@@ -21,7 +23,7 @@ const Navbar = () => {
         {/* NavabrLinks for Desktop */}
           <ul className='md:flex md:flex-row md:gap-16 hidden'>
             {links.map((link) => (
-              <li className='text-white py-1 px-4 text-lg rounded-[10px] hover:bg-white hover:bg-opacity-30 hover:py-1 hover:px-4 hover:cursor-pointer duration-200'>{link.tittle}</li>
+              <li className='text-white py-1 px-4 text-lg rounded-[10px] hover:bg-white hover:bg-opacity-30 hover:py-1 hover:px-4 hover:cursor-pointer duration-200'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
             ))}
           </ul>
         {/* NavbarLinks for Mobile */}
@@ -29,15 +31,15 @@ const Navbar = () => {
         </div>
     </nav>
     {toggle ? (
-      <div className={`bg-navbarMobile transform absolute translate-y-[90px] duration-200 py-10  left-0 right-0 mx-3 md:hidden flex flex-col items-center gap-10 rounded-[10px]`}>
+      <div className={`${navbar} translate-y-[90px] md:hidden`}>
         {links.map((link) => (
-          <li className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'>{link.tittle}</li>
+          <li onClick={() => setToggle(false)} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
         ))}
       </div>
     ) : 
-      <div className={`bg-navbarMobile transform -translate-y-[200px] duration-200 absolute  py-10  left-0 right-0 mx-3 md:hidden flex    flex-col items-center gap-10 rounded-[10px]`}>
+      <div className={`${navbar} -translate-y-[200px] md:hidden`}>
         {links.map((link) => (
-          <li className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'>{link.tittle}</li>
+          <li className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
         ))}
       </div>
   }
