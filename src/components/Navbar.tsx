@@ -3,7 +3,7 @@ import { links } from '../constants/index'
 import { HamburgerBoring } from 'react-animated-burgers'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { navbar } from '../constants/index'
+import { styles } from '../constants/index'
 
 
 const Navbar = () => {
@@ -22,8 +22,8 @@ const Navbar = () => {
           </div>
         {/* NavabrLinks for Desktop */}
           <ul className='md:flex md:flex-row md:gap-16 hidden'>
-            {links.map((link) => (
-              <li className='text-white py-1 px-4 text-lg rounded-[10px] hover:bg-white hover:bg-opacity-30 hover:py-1 hover:px-4 hover:cursor-pointer duration-200'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
+            {links.map((link, key) => (
+              <li key={link.id} className='text-white py-1 px-4 text-lg rounded-[10px] hover:bg-white hover:bg-opacity-30 hover:py-1 hover:px-4 hover:cursor-pointer duration-200'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
             ))}
           </ul>
         {/* NavbarLinks for Mobile */}
@@ -31,15 +31,15 @@ const Navbar = () => {
         </div>
     </nav>
     {toggle ? (
-      <div className={`${navbar} translate-y-[90px] md:hidden`}>
-        {links.map((link) => (
-          <li onClick={() => setToggle(false)} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
+      <div className={`${styles.navbar} translate-y-[90px] md:hidden`}>
+        {links.map((link, key) => (
+          <li key={link.id} onClick={() => setToggle(false)} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
         ))}
       </div>
     ) : 
-      <div className={`${navbar} -translate-y-[200px] md:hidden`}>
-        {links.map((link) => (
-          <li className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
+      <div className={`${styles.navbar} -translate-y-[200px] md:hidden`}>
+        {links.map((link, key) => (
+          <li key={link.id} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
         ))}
       </div>
   }

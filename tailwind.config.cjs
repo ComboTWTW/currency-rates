@@ -11,6 +11,8 @@ module.exports = {
       colors: {
         "navbarBG": '#0a146e',
         "navbarMobile": '#1e293b',
+        "cardBG": '#e7e9ec',
+        "bTextColor": '#141e37',
       }
     },
     screens: {

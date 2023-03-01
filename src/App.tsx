@@ -1,7 +1,6 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Chart from './components/Chart'
-import Date from './components/Date'
-import Game from "./components/Game"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Chart from './Pages/Chart'
+import Date from './Pages/Date'
 import Navbar from './components/Navbar'
 import Convert from './Pages/Convert'
 
@@ -11,7 +10,7 @@ const App = () => {
     <Router>
       <div>
         <Navbar />
-        <div className="flex flex-col items-center min-h-screen w-full">
+        <div className="flex flex-col items-center min-h-screen w-full bg-cardBG">
           <Routes>
             <Route path={'/'} element={<Convert />}/>
             <Route path={'/chart'} element={<Chart/>}/>
