@@ -6,10 +6,10 @@ const Convert = () => {
 
   //https://apilayer.com/marketplace/fixer-api#
 
-  apiSymbols().then(res => console.log(res))
+  //apiSymbols().then(res => console.log(res))
 
   return (
-    <div className='container flex flex-col items-center mt-24 px-4'>
+    <div className='container flex flex-col items-center mt-24 px-4 mb-96'>
         <h1 className='text-black font-bold text-3xl'>Currency Converter</h1>
         {/* Main Card */}
         <div className="bg-white container flex flex-col mt-10 rounded-[10px] px-6 py-6 md:py-12 md:px-12">
