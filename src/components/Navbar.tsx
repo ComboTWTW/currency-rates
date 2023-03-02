@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="">
     <nav className="fixed top-0 z-10 w-full bg-navbarBG flex flex-row justify-center">
         {/* Logo */}
-        <div className="relative container flex flex-row justify-between items-center px-4 py-4 md:mx-3">
+        <div className="relative bg-navbarBG z-20 container flex flex-row justify-between items-center px-4 py-4 md:mx-3">
           <div className="flex flex-row gap-4 items-center">
             <a href="#"><img src={logo} alt="logo" className='w-[40px] h-[40px]'/></a>
             <h2 className='font-semibold text-xl text-white'>CurrencyRates</h2>
@@ -29,20 +29,21 @@ const Navbar = () => {
         {/* NavbarLinks for Mobile */}
         <HamburgerBoring barColor='white' className=" md:hidden" buttonWidth={28} isActive={toggle}  toggleButton={() => setToggle(!toggle)}/>  
         </div>
-    </nav>
-    {toggle ? (
+
+        {toggle ? (
       <div className={`${styles.navbar} translate-y-[90px] md:hidden`}>
         {links.map((link, key) => (
           <li key={link.id} onClick={() => setToggle(false)} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
         ))}
       </div>
     ) : 
-      <div className={`${styles.navbar} -translate-y-[200px] md:hidden`}>
+      <div className={`${styles.navbar} -translate-y-[200px] -z-10 md:hidden`}>
         {links.map((link, key) => (
           <li key={link.id} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
         ))}
       </div>
   }
+    </nav>
     </div>
   )
 }
