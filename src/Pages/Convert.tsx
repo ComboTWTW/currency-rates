@@ -17,7 +17,10 @@ const Convert = () => {
           <div className="flex flex-col gap-6 md:flex-row">
             <div className="flex flex-col gap-2">
               <h2 className="text-bTextColor font-bold text-[1.125rem]">Amount</h2>
-              <input type="number" className={styles.inputBorder} />
+              <input type="number" className={styles.inputBorder} onKeyPress={(e) => {
+                if (!/[0-9,.]/.test(e.key)) {
+                  e.preventDefault();
+              }}} />
             </div>
           {/* FromToComponent */}
             <FromTo />

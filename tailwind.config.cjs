@@ -13,6 +13,7 @@ module.exports = {
         "navbarMobile": '#1e293b',
         "cardBG": '#e7e9ec',
         "bTextColor": '#141e37',
+        "covertBG": '#0071eb',
       }
     },
     screens: {
