@@ -17,6 +17,7 @@ export const styles = {
     navbar: 'bg-navbarMobile absolute transform duration-500 left-0 right-0 ml-auto mr-auto flex flex-col items-center gap-10 rounded-[10px] py-10  md:hidden',
     cardBold: 'text-bTextColor font-bold text-[1.125rem]',
     inputBorder: 'bg-white rounded-[10px] outline-none py-3 px-3 border-[#dddddd] border border-solid focus:border-[#0f77e9] focus:border focus:border-solid',
+    compareButton: 'rounded-full flex justify-center items-center w-[50px] h-[50px] bg-white border border-[#dddddd] cursor-pointer mt-4 mb-4 active:border-covertBG',
 }
 
 export const symbols = [
