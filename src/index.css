@@ -19,3 +19,21 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.containerNavbar {
+  width: 100%;
+}
+@media (min-width: 320px) {
+  .containerNavbar {
+      max-width: 28rem;
+  }
+}
+@media (min-width: 768px) {
+  .containerNavbar {
+      max-width: 672px;
+  }
+}
+
+.test {
+  background-color: black;
+}
