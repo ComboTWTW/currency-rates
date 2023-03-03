@@ -34,20 +34,3 @@ input[type=number] {
   }
 }
 
-.containerSelect {
-  width: 100%;
-}
-@media (min-width: 320px) {
-  .containerSelect {
-      max-width: 28rem;
-  }
-}
-@media (min-width: 768px) {
-  .containerSelect {
-      max-width: 672px;
-  }
-}
-
-.test {
-  background-color: black;
-}
