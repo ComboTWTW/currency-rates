@@ -14,10 +14,10 @@ const Convert = () => {
         <h1 className='text-black font-bold text-3xl'>Currency Converter</h1>
 
         {/* Main White Card Start*/}
-        <div className="bg-white container flex flex-col gap-6 mt-10 rounded-[10px] px-6 py-6 md:flex-row md:justify-between md:gap-4 md:py-12 md:px-12">
+        <div className="bg-white container flex flex-col gap-6 mt-10 rounded-[10px] px-6 py-6 md:flex-row md:justify-between md:gap-4 md:py-12 md:px-10">
 
           {/* Amount Start */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 md:min-w-0 md:flex-1">
             <h2 className={`${styles.cardBold}`}>Amount</h2>
             <input type="number" className={styles.inputBorder} onKeyPress={(e) => {
               if (!/[0-9,.]/.test(e.key)) {
@@ -27,7 +27,7 @@ const Convert = () => {
           {/* Amount End */}
 
           {/* From Start */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 md:min-w-0 md:flex-1">
             <h2 className={`${styles.cardBold}`}>From</h2>
             <select id="from" className={styles.inputBorder}>
               {symbols.map((symbol) => (
@@ -44,7 +44,7 @@ const Convert = () => {
           {/* Compare Button End */} 
 
           {/* To Start */}
-          <div className="flex flex-col gap-2">     
+          <div className="flex flex-col gap-2 md:min-w-0 md:flex-1">     
             <h2 className={`${styles.cardBold}`}>To</h2>
             <select id="from" className={styles.inputBorder}>
                 {symbols.map((symbol) => (
