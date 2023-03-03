@@ -1,14 +1,14 @@
-import { styles, symbols } from '../constants/index'
 import FromTo from '../components/FromTo';
-import { apiSymbols } from '../api/api';
-import compare from '../assets/compare.jpg'
 import Amount from '../components/Amount';
+import { useState } from 'react';
 
 const Convert = () => {
 
-  //https://apilayer.com/marketplace/fixer-api#
+  const [from, setFrom] = useState<string>('');
+  const [to, setTo] = useState<string>('');
 
-  //apiSymbols().then(res => console.log(res))
+  console.log(from);
+  console.log(to);
 
   return (
     <div className='container flex flex-col items-center mt-24 px-4 mb-96'>
@@ -21,7 +21,7 @@ const Convert = () => {
           <Amount />
 
           {/* FromTo Component */}
-          <FromTo />   
+          <FromTo setFrom={setFrom} setTo={setTo} />   
 
         </div>    
         {/* Main White Card End*/} 
