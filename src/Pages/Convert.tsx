@@ -6,6 +6,9 @@ const Convert = () => {
 
   const [from, setFrom] = useState<string>('AFN');
   const [to, setTo] = useState<string>('AFN');
+  const [amount, setAmount] = useState<number>(5);
+
+  console.log("amount is " + amount)
 
   return (
     <div className='container flex flex-col items-center mt-24 px-4 mb-96'>
@@ -15,7 +18,7 @@ const Convert = () => {
         <div className="bg-white container flex flex-col gap-6 mt-10 rounded-[10px] px-6 py-6 md:flex-row md:justify-between md:gap-4 md:py-12 md:px-10">
 
           {/* Amount Component */}
-          <Amount from={from} />
+          <Amount from={from} setAmount={setAmount}/>
 
           {/* FromTo Component */}
           <FromTo setFrom={setFrom} setTo={setTo} from={from} to={to}/>   
