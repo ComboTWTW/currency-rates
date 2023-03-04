@@ -6,9 +6,10 @@ const Convert = () => {
 
   const [from, setFrom] = useState<string>('AFN');
   const [to, setTo] = useState<string>('AFN');
-  const [amount, setAmount] = useState<number>(5);
+  const [amount, setAmount] = useState<number | null>(5);
 
-  console.log("amount is " + amount)
+  
+ 
 
   return (
     <div className='container flex flex-col items-center mt-24 px-4 mb-96'>

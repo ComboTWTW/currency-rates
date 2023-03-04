@@ -34,7 +34,7 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
       <h2 className={`${styles.cardBold}`}>From</h2>
       <select id="from" className={styles.inputBorder}  onChange={(event) => setFrom(event.target.value.substring(0,3))}>
         {symbols.map((symbol) => (
-          <option value={[symbol.symbol, symbol.text]}>{symbol.symbol + symbol.text}</option>
+          <option value={[symbol.symbol, symbol.text]} >{symbol.symbol + symbol.text}</option>
         ))}
       </select>
     </div>  
