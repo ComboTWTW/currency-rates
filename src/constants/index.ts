@@ -18,8 +18,45 @@ export const styles = {
     cardBold: 'text-bTextColor font-bold text-[1.125rem]',
     inputBorder: 'bg-white rounded-[10px] outline-none text-ellipsis py-3 px-3 border-[#dddddd] border border-solid focus:border-[#0f77e9] focus:border focus:border-solid',
     amount: 'bg-white rounded-[10px] outline-none text-ellipsis py-3 px-3 border-[#dddddd] border border-solid focus:border-[#0f77e9] focus:border focus:border-solid',
-    compareButton: 'rounded-full flex justify-center items-center w-[50px] h-[50px] bg-white border border-[#dddddd] cursor-pointer active:border-covertBG',
+    compareButton: 'rounded-full flex justify-center items-center w-[50px] h-[50px] bg-white border border-[#dddddd] cursor-pointer active:border-covertBG mt-3',
 }
+
+export const selectStyles = {
+
+    control: (baseStyles:any, state:any) => ({
+      ...baseStyles,
+      backgroundColor: "white",
+      borderRadius: "10px",
+      outline: "none",
+      textOverflow: "ellipsis",
+      padding: "0.35rem",
+      border: "#ddd 1px solid",
+      ':hover': {
+        border: "#ddd 1px solid",
+      },
+    }),
+    menu: (baseStyles:any, state:any) => ({
+      ...baseStyles,
+      borderRadius: "10px",
+    }),
+    option: (baseStyles:any, state:any) => ({
+      ...baseStyles,
+      fontSize: '0.925rem',
+      ':hover': {
+        backgroundColor: 'light-gray',
+      }
+    }),
+    valueContainer: (baseStyles:any, state:any) => ({
+      ...baseStyles,
+      paddingRight: 0,
+    }),
+    noOptionsMessage: (baseStyles:any, state:any) => ({
+      ...baseStyles,
+      paddingTop: '2px',
+      paddingBottom: '2px',
+      color: 'black',
+    }),
+  }
 
 
 export const options = [
