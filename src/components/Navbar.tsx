@@ -38,13 +38,13 @@ const Navbar = () => {
 
         {/* NavbarLinks Start*/}        
         {toggle ? (
-          <div className={`${styles.navbar} containerNavbar translate-y-[90px]`}>
+          <div className={`${styles.navbar} container translate-y-[90px]`}>
             {links.map((link, key) => (
               <li key={link.id} onClick={() => setToggle(false)} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
             ))}
           </div>
         ) : 
-          <div className={`${styles.navbar} containerNavbar -translate-y-[200px] `}>
+          <div className={`${styles.navbar} container -translate-y-[200px] `}>
             {links.map((link, key) => (
               <li key={link.id} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'><NavLink to={`${link.id}`}>{link.tittle}</NavLink></li>
             ))}

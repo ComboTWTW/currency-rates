@@ -30,6 +30,7 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
   }
 
   const selectStyles = {
+
     control: (baseStyles:any, state:any) => ({
       ...baseStyles,
       backgroundColor: "white",
@@ -38,8 +39,8 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
       textOverflow: "ellipsis",
       padding: "0.35rem",
       border: "#ddd 1px solid",
-      ':active': {
-        border: 'none',
+      ':hover': {
+        border: "#ddd 1px solid",
       },
     }),
     menu: (baseStyles:any, state:any) => ({
@@ -48,16 +49,22 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
     }),
     option: (baseStyles:any, state:any) => ({
       ...baseStyles,
-      borderRadius: "10px",
-      fontSize: '0.925rem'
-      
+      fontSize: '0.925rem',
+      ':hover': {
+        backgroundColor: 'light-gray',
+      }
     }),
+    valueContainer: (baseStyles:any, state:any) => ({
+      ...baseStyles,
+      paddingRight: 0,
+    }),
+    
   }
 
   return <Fragment>
     
     {/* From Start */}
-    <div className="flex flex-col gap-2 mt-2 md:mt-0 md:min-w-0 md:flex-1">
+    <div className="flex  flex-col gap-2 mt-2 md:mt-0 md:min-w-0 md:flex-1">
       <h2 className={`${styles.cardBold}`}>From</h2>
       <Select
         className='shadow-md rounded-[10px]'
