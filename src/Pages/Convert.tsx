@@ -16,7 +16,7 @@ const Convert = () => {
         <h1 className='text-black font-bold text-3xl'>Currency Converter</h1>
 
         {/* Main White Card Start*/}
-        <div className="bg-white container flex flex-col gap-6 mt-10 rounded-[10px] px-6 py-6 md:flex-row md:justify-between md:gap-4 md:py-12 md:px-10">
+        <div className="bg-white container flex flex-col gap-6 mt-10 rounded-[10px] px-6 py-6 shadow-lg md:flex-row md:justify-between md:gap-4 md:py-12 md:px-10">
 
           {/* Amount Component */}
           <Amount from={from} setAmount={setAmount}/>

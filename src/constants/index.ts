@@ -17,688 +17,690 @@ export const styles = {
     navbar: 'bg-navbarMobile absolute transform duration-500 left-0 right-0 ml-auto mr-auto flex flex-col items-center gap-10 rounded-[10px] py-10  md:hidden',
     cardBold: 'text-bTextColor font-bold text-[1.125rem]',
     inputBorder: 'bg-white rounded-[10px] outline-none text-ellipsis py-3 px-3 border-[#dddddd] border border-solid focus:border-[#0f77e9] focus:border focus:border-solid',
+    amount: 'bg-white rounded-[10px] outline-none text-ellipsis py-3 px-3 border-[#dddddd] border border-solid focus:border-[#0f77e9] focus:border focus:border-solid',
     compareButton: 'rounded-full flex justify-center items-center w-[50px] h-[50px] bg-white border border-[#dddddd] cursor-pointer active:border-covertBG',
 }
 
-export const symbols = [
+
+export const options = [
     {
-        symbol: 'AFN',
-        text: ' - Afghan Afghani'
+        value: 'AFN',
+        label: "AFN - Afghan Afghani"
     },
     {
-        symbol: 'AED',
-        text: ' - United Arab Emirates Dirham'
+        value: 'AED',
+        label: "AED - United Arab Emirates Dirham"
     },
     {
-        symbol: 'ALL',
-        text: ' - Albanian Lek'
+        value: 'ALL',
+        label: "ALL - Albanian Lek"
     },
     {
-        symbol: 'AMD',
-        text: ' - Armenian Dram'
+        value: 'AMD',
+        label: "AMD - Armenian Dram"
     },
     {
-        symbol: 'ANG',
-        text: ' - Netherlands Antillean Guilder'
+        value: 'ANG',
+        label: "ANG - Netherlands Antillean Guilder"
     },
     {
-        symbol: 'AOA',
-        text: ' - Angolan Kwanza'
+        value: 'AOA',
+        label: "AOA - Angolan Kwanza"
     },
     {
-        symbol: 'ARS',
-        text: ' - Argentine Peso'
+        value: 'ARS',
+        label: "ARS - Argentine Peso"
     },
     {
-        symbol: 'AUD',
-        text: ' - Australian Dollar'
+        value: 'AUD',
+        label: "AUD - Australian Dollar"
     },
     {
-        symbol: 'AWG',
-        text: ' - Aruban Florin'
+        value: 'AWG',
+        label: "AWG - Aruban Florin"
     },
     {
-        symbol: 'AZN',
-        text: ' - Azerbaijani Manat'
+        value: 'AZN',
+        label: "AZN - Azerbaijani Manat"
     },
     {
-        symbol: 'BAM',
-        text: ' - Bosnia-Herzegovina Convertible Mark'
+        value: 'BAM',
+        label: "BAM - Bosnia-Herzegovina Convertible Mark"
     },
     {
-        symbol: 'BBD',
-        text: ' - Barbadian Dollar'
+        value: 'BBD',
+        label: "BBD - Barbadian Dollar"
     },
     {
-        symbol: 'BDT',
-        text: ' - Bangladeshi Taka'
+        value: 'BDT',
+        label: "BDT - Bangladeshi Taka"
     },
     {
-        symbol: 'BGN',
-        text: ' - Bulgarian Lev'
+        value: 'BGN',
+        label: "BGN - Bulgarian Lev"
     },
     {
-        symbol: 'BHD',
-        text: ' - Bahraini Dinar'
+        value: 'BHD',
+        label: "BHD - Bahraini Dinar"
     },
     {
-        symbol: 'BIF',
-        text: ' - Burundian Franc'
+        value: 'BIF',
+        label: "BIF - Burundian Franc"
     },
     {
-        symbol: 'BMD',
-        text: ' - Bermudan Dollar'
+        value: 'BMD',
+        label: "BMD - Bermudan Dollar"
     },
     {
-        symbol: 'BND',
-        text: ' - Brunei Dollar'
+        value: 'BND',
+        label: "BND - Brunei Dollar"
     },
     {
-        symbol: 'BOB',
-        text: ' - Bolivian Boliviano'
+        value: 'BOB',
+        label: "BOB - Bolivian Boliviano"
     },
     {
-        symbol: 'BRL',
-        text: ' - Brazilian Real'
+        value: 'BRL',
+        label: "BRL - Brazilian Real"
     },
     {
-        symbol: 'BSD',
-        text: ' - Bahamian Dollar'
+        value: 'BSD',
+        label: "BSD - Bahamian Dollar"
     },
     {
-        symbol: 'BTC',
-        text: ' - Bitcoin'
+        value: 'BTC',
+        label: "BTC - Bitcoin"
     },
     {
-        symbol: 'BTN',
-        text: ' - Bhutanese Ngultrum'
+        value: 'BTN',
+        label: "BTN - Bhutanese Ngultrum"
     },
     {
-        symbol: 'BWP',
-        text: ' - Botswanan Pula'
+        value: 'BWP',
+        label: "BWP - Botswanan Pula"
     },
     {
-        symbol: 'BYN',
-        text: ' - New Belarusian Ruble'
+        value: 'BYN',
+        label: "BYN - New Belarusian Ruble"
     },
     {
-        symbol: 'BYR',
-        text: ' - Belarusian Ruble'
+        value: 'BYR',
+        label: "BYR - Belarusian Ruble"
     },
     {
-        symbol: 'BZD',
-        text: ' - Belize Dollar'
+        value: 'BZD',
+        label: "BZD - Belize Dollar"
     },
     {
-        symbol: 'CAD',
-        text: ' - Canadian Dollar'
+        value: 'CAD',
+        label: "CAD - Canadian Dollar"
     },
     {
-        symbol: 'CDF',
-        text: ' - Congolese Franc'
+        value: 'CDF',
+        label: "CDF - Congolese Franc"
     },
     {
-        symbol: 'CHF',
-        text: ' - Swiss Franc'
+        value: 'CHF',
+        label: "CHF - Swiss Franc"
     },
     {
-        symbol: 'CLF',
-        text: ' - Chilean Unit of Account (UF)'
+        value: 'CLF',
+        label: "CLF - Chilean Unit of Account (UF)"
     },
     {
-        symbol: 'CLP',
-        text: ' - Chilean Peso'
+        value: 'CLP',
+        label: "CLP - Chilean Peso"
     },
     {
-        symbol: 'CNY',
-        text: ' - Chinese Yuan'
+        value: 'CNY',
+        label: "CNY - Chinese Yuan"
     },
     {
-        symbol: 'COP',
-        text: ' - Colombian Peso'
+        value: 'COP',
+        label: "COP - Colombian Peso"
     },
     {
-        symbol: 'CRC',
-        text: ' - Costa Rican Coln'
+        value: 'CRC',
+        label: "CRC - Costa Rican Col\u00f3n"
     },
     {
-        symbol: 'CUC',
-        text: ' - Cuban Convertible Peso'
+        value: 'CUC',
+        label: "CUC - Cuban Convertible Peso"
     },
     {
-        symbol: 'CUP',
-        text: ' - Cuban Peso'
+        value: 'CUP',
+        label: "CUP - Cuban Peso"
     },
     {
-        symbol: 'CVE',
-        text: ' - Cape Verdean Escudo'
+        value: 'CVE',
+        label: "CVE - Cape Verdean Escudo"
     },
     {
-        symbol: 'CZK',
-        text: ' - Czech Republic Koruna'
+        value: 'CZK',
+        label: "CZK - Czech Republic Koruna"
     },
     {
-        symbol: 'DJF',
-        text: ' - Djiboutian Franc'
+        value: 'DJF',
+        label: "DJF - Djiboutian Franc"
     },
     {
-        symbol: 'DKK',
-        text: ' - Danish Krone'
+        value: 'DKK',
+        label: "DKK - Danish Krone"
     },
     {
-        symbol: 'DOP',
-        text: ' - Dominican Peso'
+        value: 'DOP',
+        label: "DOP - Dominican Peso"
     },
     {
-        symbol: 'DZD',
-        text: ' - Algerian Dinar'
+        value: 'DZD',
+        label: "DZD - Algerian Dinar"
     },
     {
-        symbol: 'EGP',
-        text: ' - Egyptian Pound'
+        value: 'EGP',
+        label: "EGP - Egyptian Pound"
     },
     {
-        symbol: 'ERN',
-        text: ' - Eritrean Nakfa'
+        value: 'ERN',
+        label: "ERN - Eritrean Nakfa"
     },
     {
-        symbol: 'ETB',
-        text: ' - Ethiopian Birr'
+        value: 'ETB',
+        label: "ETB - Ethiopian Birr"
     },
     {
-        symbol: 'EUR',
-        text: ' - Euro'
+        value: 'EUR',
+        label: "EUR - Euro"
     },
     {
-        symbol: 'FJD',
-        text: ' - Fijian Dollar'
+        value: 'FJD',
+        label: "FJD - Fijian Dollar"
     },
     {
-        symbol: 'FKP',
-        text: ' - Falkland Islands Pound'
+        value: 'FKP',
+        label: "FKP - Falkland Islands Pound"
     },
     {
-        symbol: 'GBP',
-        text: ' - British Pound Sterling'
+        value: 'GBP',
+        label: "GBP - British Pound Sterling"
     },
     {
-        symbol: 'GEL',
-        text: ' - Georgian Lari'
+        value: 'GEL',
+        label: "GEL - Georgian Lari"
     },
     {
-        symbol: 'GGP',
-        text: ' - Guernsey Pound'
+        value: 'GGP',
+        label: "GGP - Guernsey Pound"
     },
     {
-        symbol: 'GHS',
-        text: ' - Ghanaian Cedi'
+        value: 'GHS',
+        label: "GHS - Ghanaian Cedi"
     },
     {
-        symbol: 'GIP',
-        text: ' - Gibraltar Pound'
+        value: 'GIP',
+        label: "GIP - Gibraltar Pound"
     },
     {
-        symbol: 'GMD',
-        text: ' - Gambian Dalasi'
+        value: 'GMD',
+        label: "GMD - Gambian Dalasi"
     },
     {
-        symbol: 'GNF',
-        text: ' - Guinean Franc'
+        value: 'GNF',
+        label: "GNF - Guinean Franc"
     },
     {
-        symbol: 'GTQ',
-        text: ' - Guatemalan Quetzal'
+        value: 'GTQ',
+        label: "GTQ - Guatemalan Quetzal"
     },
     {
-        symbol: 'GYD',
-        text: ' - Guyanaese Dollar'
+        value: 'GYD',
+        label: "GYD - Guyanaese Dollar"
     },
     {
-        symbol: 'HKD',
-        text: ' - Hong Kong Dollar'
+        value: 'HKD',
+        label: "HKD - Hong Kong Dollar"
     },
     {
-        symbol: 'HNL',
-        text: ' - Honduran Lempira'
+        value: 'HNL',
+        label: "HNL - Honduran Lempira"
     },
     {
-        symbol: 'HRK',
-        text: ' - Croatian Kuna'
+        value: 'HRK',
+        label: "HRK - Croatian Kuna"
     },
     {
-        symbol: 'HTG',
-        text: ' - Haitian Gourde'
+        value: 'HTG',
+        label: "HTG - Haitian Gourde"
     },
     {
-        symbol: 'HUF',
-        text: ' - Hungarian Forint'
+        value: 'HUF',
+        label: "HUF - Hungarian Forint"
     },
     {
-        symbol: 'IDR',
-        text: ' - Indonesian Rupiah'
+        value: 'IDR',
+        label: "IDR - Indonesian Rupiah"
     },
     {
-        symbol: 'ILS',
-        text: ' - Israeli New Sheqel'
+        value: 'ILS',
+        label: "ILS - Israeli New Sheqel"
     },
     {
-        symbol: 'IMP',
-        text: ' - Manx pound'
+        value: 'IMP',
+        label: "IMP - Manx pound"
     },
     {
-        symbol: 'INR',
-        text: ' - Indian Rupee'
+        value: 'INR',
+        label: "INR - Indian Rupee"
     },
     {
-        symbol: 'IQD',
-        text: ' - Iraqi Dinar'
+        value: 'IQD',
+        label: "IQD - Iraqi Dinar"
     },
     {
-        symbol: 'IRR',
-        text: ' - Iranian Rial'
+        value: 'IRR',
+        label: "IRR - Iranian Rial"
     },
     {
-        symbol: 'ISK',
-        text: ' - Icelandic Krna'
+        value: 'ISK',
+        label: "ISK - Icelandic Kr\u00f3na"
     },
     {
-        symbol: 'JEP',
-        text: ' - Jersey Pound'
+        value: 'JEP',
+        label: "JEP - Jersey Pound"
     },
     {
-        symbol: 'JMD',
-        text: ' - Jamaican Dollar'
+        value: 'JMD',
+        label: "JMD - Jamaican Dollar"
     },
     {
-        symbol: 'JOD',
-        text: ' - Jordanian Dinar'
+        value: 'JOD',
+        label: "JOD - Jordanian Dinar"
     },
     {
-        symbol: 'JPY',
-        text: ' - Japanese Yen'
+        value: 'JPY',
+        label: "JPY - Japanese Yen"
     },
     {
-        symbol: 'KES',
-        text: ' - Kenyan Shilling'
+        value: 'KES',
+        label: "KES - Kenyan Shilling"
     },
     {
-        symbol: 'KGS',
-        text: ' - Kyrgystani Som'
+        value: 'KGS',
+        label: "KGS - Kyrgystani Som"
     },
     {
-        symbol: 'KHR',
-        text: ' - Cambodian Riel'
+        value: 'KHR',
+        label: "KHR - Cambodian Riel"
     },
     {
-        symbol: 'KMF',
-        text: ' - Comorian Franc'
+        value: 'KMF',
+        label: "KMF - Comorian Franc"
     },
     {
-        symbol: 'KPW',
-        text: ' - North Korean Won'
+        value: 'KPW',
+        label: "KPW - North Korean Won"
     },
     {
-        symbol: 'KRW',
-        text: ' - South Korean Won'
+        value: 'KRW',
+        label: "KRW - South Korean Won"
     },
     {
-        symbol: 'KWD',
-        text: ' - Kuwaiti Dinar'
+        value: 'KWD',
+        label: "KWD - Kuwaiti Dinar"
     },
     {
-        symbol: 'KYD',
-        text: ' - Cayman Islands Dollar'
+        value: 'KYD',
+        label: "KYD - Cayman Islands Dollar"
     },
     {
-        symbol: 'KZT',
-        text: ' - Kazakhstani Tenge'
+        value: 'KZT',
+        label: "KZT - Kazakhstani Tenge"
     },
     {
-        symbol: 'LAK',
-        text: ' - Laotian Kip'
+        value: 'LAK',
+        label: "LAK - Laotian Kip"
     },
     {
-        symbol: 'LBP',
-        text: ' - Lebanese Pound'
+        value: 'LBP',
+        label: "LBP - Lebanese Pound"
     },
     {
-        symbol: 'LKR',
-        text: ' - Sri Lankan Rupee'
+        value: 'LKR',
+        label: "LKR - Sri Lankan Rupee"
     },
     {
-        symbol: 'LRD',
-        text: ' - Liberian Dollar'
+        value: 'LRD',
+        label: "LRD - Liberian Dollar"
     },
     {
-        symbol: 'LSL',
-        text: ' - Lesotho Loti'
+        value: 'LSL',
+        label: "LSL - Lesotho Loti"
     },
     {
-        symbol: 'LTL',
-        text: ' - Lithuanian Litas'
+        value: 'LTL',
+        label: "LTL - Lithuanian Litas"
     },
     {
-        symbol: 'LVL',
-        text: ' - Latvian Lats'
+        value: 'LVL',
+        label: "LVL - Latvian Lats"
     },
     {
-        symbol: 'LYD',
-        text: ' - Libyan Dinar'
+        value: 'LYD',
+        label: "LYD - Libyan Dinar"
     },
     {
-        symbol: 'MAD',
-        text: ' - Moroccan Dirham'
+        value: 'MAD',
+        label: "MAD - Moroccan Dirham"
     },
     {
-        symbol: 'MDL',
-        text: ' - Moldovan Leu'
+        value: 'MDL',
+        label: "MDL - Moldovan Leu"
     },
     {
-        symbol: 'MGA',
-        text: ' - Malagasy Ariary'
+        value: 'MGA',
+        label: "MGA - Malagasy Ariary"
     },
     {
-        symbol: 'MKD',
-        text: ' - Macedonian Denar'
+        value: 'MKD',
+        label: "MKD - Macedonian Denar"
     },
     {
-        symbol: 'MMK',
-        text: ' - Myanma Kyat'
+        value: 'MMK',
+        label: "MMK - Myanma Kyat"
     },
     {
-        symbol: 'MNT',
-        text: ' - Mongolian Tugrik'
+        value: 'MNT',
+        label: "MNT - Mongolian Tugrik"
     },
     {
-        symbol: 'MOP',
-        text: ' - Macanese Pataca'
+        value: 'MOP',
+        label: "MOP - Macanese Pataca"
     },
     {
-        symbol: 'MRO',
-        text: ' - Mauritanian Ouguiya'
+        value: 'MRO',
+        label: "MRO - Mauritanian Ouguiya"
     },
     {
-        symbol: 'MUR',
-        text: ' - Mauritian Rupee'
+        value: 'MUR',
+        label: "MUR - Mauritian Rupee"
     },
     {
-        symbol: 'MVR',
-        text: ' - Maldivian Rufiyaa'
+        value: 'MVR',
+        label: "MVR - Maldivian Rufiyaa"
     },
     {
-        symbol: 'MWK',
-        text: ' - Malawian Kwacha'
+        value: 'MWK',
+        label: "MWK - Malawian Kwacha"
     },
     {
-        symbol: 'MXN',
-        text: ' - Mexican Peso'
+        value: 'MXN',
+        label: "MXN - Mexican Peso"
     },
     {
-        symbol: 'MYR',
-        text: ' - Malaysian Ringgit'
+        value: 'MYR',
+        label: "MYR - Malaysian Ringgit"
     },
     {
-        symbol: 'MZN',
-        text: ' - Mozambican Metical'
+        value: 'MZN',
+        label: "MZN - Mozambican Metical"
     },
     {
-        symbol: 'NAD',
-        text: ' - Namibian Dollar'
+        value: 'NAD',
+        label: "NAD - Namibian Dollar"
     },
     {
-        symbol: 'NGN',
-        text: ' - Nigerian Naira'
+        value: 'NGN',
+        label: "NGN - Nigerian Naira"
     },
     {
-        symbol: 'NIO',
-        text: ' - Nicaraguan Crdoba'
+        value: 'NIO',
+        label: "NIO - Nicaraguan C\u00f3rdoba"
     },
     {
-        symbol: 'NOK',
-        text: ' - Norwegian Krone'
+        value: 'NOK',
+        label: "NOK - Norwegian Krone"
     },
     {
-        symbol: 'NPR',
-        text: ' - Nepalese Rupee'
+        value: 'NPR',
+        label: "NPR - Nepalese Rupee"
     },
     {
-        symbol: 'NZD',
-        text: ' - New Zealand Dollar'
+        value: 'NZD',
+        label: "NZD - New Zealand Dollar"
     },
     {
-        symbol: 'OMR',
-        text: ' - Omani Rial'
+        value: 'OMR',
+        label: "OMR - Omani Rial"
     },
     {
-        symbol: 'PAB',
-        text: ' - Panamanian Balboa'
+        value: 'PAB',
+        label: "PAB - Panamanian Balboa"
     },
     {
-        symbol: 'PEN',
-        text: ' - Peruvian Nuevo Sol'
+        value: 'PEN',
+        label: "PEN - Peruvian Nuevo Sol"
     },
     {
-        symbol: 'PGK',
-        text: ' - Papua New Guinean Kina'
+        value: 'PGK',
+        label: "PGK - Papua New Guinean Kina"
     },
     {
-        symbol: 'PHP',
-        text: ' - Philippine Peso'
+        value: 'PHP',
+        label: "PHP - Philippine Peso"
     },
     {
-        symbol: 'PKR',
-        text: ' - Pakistani Rupee'
+        value: 'PKR',
+        label: "PKR - Pakistani Rupee"
     },
     {
-        symbol: 'PLN',
-        text: ' - Polish Zloty'
+        value: 'PLN',
+        label: "PLN - Polish Zloty"
     },
     {
-        symbol: 'PYG',
-        text: ' - Paraguayan Guarani'
+        value: 'PYG',
+        label: "PYG - Paraguayan Guarani"
     },
     {
-        symbol: 'QAR',
-        text: ' - Qatari Rial'
+        value: 'QAR',
+        label: "QAR - Qatari Rial"
     },
     {
-        symbol: 'RON',
-        text: ' - Romanian Leu'
+        value: 'RON',
+        label: "RON - Romanian Leu"
     },
     {
-        symbol: 'RSD',
-        text: ' - Serbian Dinar'
+        value: 'RSD',
+        label: "RSD - Serbian Dinar"
     },
     {
-        symbol: 'RUB',
-        text: ' - Russian Ruble'
+        value: 'RUB',
+        label: "RUB - Russian Ruble"
     },
     {
-        symbol: 'RWF',
-        text: ' - Rwandan Franc'
+        value: 'RWF',
+        label: "RWF - Rwandan Franc"
     },
     {
-        symbol: 'SAR',
-        text: ' - Saudi Riyal'
+        value: 'SAR',
+        label: "SAR - Saudi Riyal"
     },
     {
-        symbol: 'SBD',
-        text: ' - Solomon Islands Dollar'
+        value: 'SBD',
+        label: "SBD - Solomon Islands Dollar"
     },
     {
-        symbol: 'SCR',
-        text: ' - Seychellois Rupee'
+        value: 'SCR',
+        label: "SCR - Seychellois Rupee"
     },
     {
-        symbol: 'SDG',
-        text: ' - Sudanese Pound'
+        value: 'SDG',
+        label: "SDG - Sudanese Pound"
     },
     {
-        symbol: 'SEK',
-        text: ' - Swedish Krona'
+        value: 'SEK',
+        label: "SEK - Swedish Krona"
     },
     {
-        symbol: 'SGD',
-        text: ' - Singapore Dollar'
+        value: 'SGD',
+        label: "SGD - Singapore Dollar"
     },
     {
-        symbol: 'SHP',
-        text: ' - Saint Helena Pound'
+        value: 'SHP',
+        label: "SHP - Saint Helena Pound"
     },
     {
-        symbol: 'SLE',
-        text: ' - Sierra Leonean Leone'
+        value: 'SLE',
+        label: "SLE - Sierra Leonean Leone"
     },
     {
-        symbol: 'SLL',
-        text: ' - Sierra Leonean Leone'
+        value: 'SLL',
+        label: "SLL - Sierra Leonean Leone"
     },
     {
-        symbol: 'SOS',
-        text: ' - Somali Shilling'
+        value: 'SOS',
+        label: "SOS - Somali Shilling"
     },
     {
-        symbol: 'SRD',
-        text: ' - Surinamese Dollar'
+        value: 'SRD',
+        label: "SRD - Surinamese Dollar"
     },
     {
-        symbol: 'STD',
-        text: ' - So Tom and Prncipe Dobra'
+        value: 'STD',
+        label: "STD - S\u00e3o Tom\u00e9 and Pr\u00edncipe Dobra"
     },
     {
-        symbol: 'SVC',
-        text: ' - Salvadoran Coln'
+        value: 'SVC',
+        label: "SVC - Salvadoran Col\u00f3n"
     },
     {
-        symbol: 'SYP',
-        text: ' - Syrian Pound'
+        value: 'SYP',
+        label: "SYP - Syrian Pound"
     },
     {
-        symbol: 'SZL',
-        text: ' - Swazi Lilangeni'
+        value: 'SZL',
+        label: "SZL - Swazi Lilangeni"
     },
     {
-        symbol: 'THB',
-        text: ' - Thai Baht'
+        value: 'THB',
+        label: "THB - Thai Baht"
     },
     {
-        symbol: 'TJS',
-        text: ' - Tajikistani Somoni'
+        value: 'TJS',
+        label: "TJS - Tajikistani Somoni"
     },
     {
-        symbol: 'TMT',
-        text: ' - Turkmenistani Manat'
+        value: 'TMT',
+        label: "TMT - Turkmenistani Manat"
     },
     {
-        symbol: 'TND',
-        text: ' - Tunisian Dinar'
+        value: 'TND',
+        label: "TND - Tunisian Dinar"
     },
     {
-        symbol: 'TOP',
-        text: ' - Tongan Paanga'
+        value: 'TOP',
+        label: "TOP - Tongan Pa\u02bbanga"
     },
     {
-        symbol: 'TRY',
-        text: ' - Turkish Lira'
+        value: 'TRY',
+        label: "TRY - Turkish Lira"
     },
     {
-        symbol: 'TTD',
-        text: ' - Trinidad and Tobago Dollar'
+        value: 'TTD',
+        label: "TTD - Trinidad and Tobago Dollar"
     },
     {
-        symbol: 'TWD',
-        text: ' - New Taiwan Dollar'
+        value: 'TWD',
+        label: "TWD - New Taiwan Dollar"
     },
     {
-        symbol: 'TZS',
-        text: ' - Tanzanian Shilling'
+        value: 'TZS',
+        label: "TZS - Tanzanian Shilling"
     },
     {
-        symbol: 'UAH',
-        text: ' - Ukrainian Hryvnia'
+        value: 'UAH',
+        label: "UAH - Ukrainian Hryvnia"
     },
     {
-        symbol: 'UGX',
-        text: ' - Ugandan Shilling'
+        value: 'UGX',
+        label: "UGX - Ugandan Shilling"
     },
     {
-        symbol: 'USD',
-        text: ' - United States Dollar'
+        value: 'USD',
+        label: "USD - United States Dollar"
     },
     {
-        symbol: 'UYU',
-        text: ' - Uruguayan Peso'
+        value: 'UYU',
+        label: "UYU - Uruguayan Peso"
     },
     {
-        symbol: 'UZS',
-        text: ' - Uzbekistan Som'
+        value: 'UZS',
+        label: "UZS - Uzbekistan Som"
     },
     {
-        symbol: 'VEF',
-        text: ' - Venezuelan Bolvar Fuerte'
+        value: 'VEF',
+        label: "VEF - Venezuelan Bol\u00edvar Fuerte"
     },
     {
-        symbol: 'VES',
-        text: ' - Sovereign Bolivar'
+        value: 'VES',
+        label: "VES - Sovereign Bolivar"
     },
     {
-        symbol: 'VND',
-        text: ' - Vietnamese Dong'
+        value: 'VND',
+        label: "VND - Vietnamese Dong"
     },
     {
-        symbol: 'VUV',
-        text: ' - Vanuatu Vatu'
+        value: 'VUV',
+        label: "VUV - Vanuatu Vatu"
     },
     {
-        symbol: 'WST',
-        text: ' - Samoan Tala'
+        value: 'WST',
+        label: "WST - Samoan Tala"
     },
     {
-        symbol: 'XAF',
-        text: ' - CFA Franc BEAC'
+        value: 'XAF',
+        label: "XAF - CFA Franc BEAC"
     },
     {
-        symbol: 'XAG',
-        text: ' - Silver (troy ounce)'
+        value: 'XAG',
+        label: "XAG - Silver (troy ounce)"
     },
     {
-        symbol: 'XAU',
-        text: ' - Gold (troy ounce)'
+        value: 'XAU',
+        label: "XAU - Gold (troy ounce)"
     },
     {
-        symbol: 'XCD',
-        text: ' - East Caribbean Dollar'
+        value: 'XCD',
+        label: "XCD - East Caribbean Dollar"
     },
     {
-        symbol: 'XDR',
-        text: ' - Special Drawing Rights'
+        value: 'XDR',
+        label: "XDR - Special Drawing Rights"
     },
     {
-        symbol: 'XOF',
-        text: ' - CFA Franc BCEAO'
+        value: 'XOF',
+        label: "XOF - CFA Franc BCEAO"
     },
     {
-        symbol: 'XPF',
-        text: ' - CFP Franc'
+        value: 'XPF',
+        label: "XPF - CFP Franc"
     },
     {
-        symbol: 'YER',
-        text: ' - Yemeni Rial'
+        value: 'YER',
+        label: "YER - Yemeni Rial"
     },
     {
-        symbol: 'ZAR',
-        text: ' - South African Rand'
+        value: 'ZAR',
+        label: "ZAR - South African Rand"
     },
     {
-        symbol: 'ZMK',
-        text: ' - Zambian Kwacha (pre-2013)'
+        value: 'ZMK',
+        label: "ZMK - Zambian Kwacha (pre-2013)"
     },
     {
-        symbol: 'ZMW',
-        text: ' - Zambian Kwacha'
+        value: 'ZMW',
+        label: "ZMW - Zambian Kwacha"
     },
     {
-        symbol: 'ZWL',
-        text: ' - Zimbabwean Dolla'
+        value: 'ZWL',
+        label: "ZWL - Zimbabwean Dollar"
     },
 ]
