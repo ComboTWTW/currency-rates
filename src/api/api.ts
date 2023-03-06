@@ -7,11 +7,13 @@ var requestOptions:RequestInit = {
   headers: myHeaders
 };
 
-export const apiConvert = (link:string) => {
-  fetch(link, requestOptions)
+
+export const apiConvert = (to:string, from:string, amount:string):any => {
+  const link = `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amount}`;
+
+  return fetch(link, requestOptions)
     .then(response => response.json())
-    .then((data) => console.log("result is " + data.result))
-    .catch(error => console.log('error', error)); 
+    .then((data) => data)
 }
 
 

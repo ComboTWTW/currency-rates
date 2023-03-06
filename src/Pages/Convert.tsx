@@ -2,6 +2,7 @@ import FromTo from '../components/FromTo';
 import Amount from '../components/Amount';
 import { useState } from 'react';
 import { apiConvert } from '../api/api';
+import { useQuery } from 'react-query'
 
 const Convert = () => {
 
@@ -9,13 +10,9 @@ const Convert = () => {
   const [to, setTo] = useState<string>('EUR');
   const [amount, setAmount] = useState<string>('5');
 
-  const link = `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amount}`;
-
-  const click = (link:string) => {
-    apiConvert(link);
-  }
-
- 
+  const { isLoading, isSuccess, data, refetch, isRefetching } = useQuery(['conv'], () => apiConvert(to, from, amount));
+  isSuccess && console.log(data);
+  
 
   return (
     <div className='container flex flex-col items-center mt-24 px-4 mb-96'>
@@ -28,20 +25,27 @@ const Convert = () => {
             {/* Amount Component */}
             <Amount from={from} setAmount={setAmount}/>
             {/* FromTo Component */}
-            <FromTo setFrom={setFrom} setTo={setTo} from={from} to={to}/>   
+            <FromTo setFrom={setFrom} setTo={setTo} from={from} to={to} />   
           </div>
           {/* ConvertationBlock End */}
-          <div className="flex flex-col md:flex-row justify-between mt-6 ">
+          <div className={`flex flex-col md:flex-row ${(isLoading || isSuccess) ? 'justify-between' : 'justify-end'} mt-8 `}>
             {/* Result Block Start */}
-            <div className="flex flex-col w-full gap-3 justify-self-start md:w-[33%]">
-              <p className='font-semibold text-gray-700'>4,000.00 US Dollars =</p>
-              <h2 className='font-bold text-black text-2xl'>301,265.43 Russian Rubles</h2>
-              <h3 className='font-normal text-gray-700'>1 USD = 75.3921 RUB</h3>
+            {
+              isLoading || isRefetching  ? 
+              <div className="">Loading</div> :
+              isSuccess && !isRefetching && 
+            <div className="flex flex-col w-full gap-3 justify-self-start md:w-[40%]">
+              <div className="flex flex-row items-center gap-3">
+                <p className='font-semibold text-gray-700'>{amount} {from} <span className='md:ml-2'>=</span></p>
+                <h2 className='font-bold text-black text-2xl'>{isSuccess && data.result} {to}</h2>
+              </div>
+              <h3 className='font-normal text-gray-700'>1 {from} = {isSuccess && data.info.rate} {to}</h3>
             </div>
+            }
             {/* Result Block End */}
 
             {/* Convertation Button Start*/}
-            <button className='bg-covertBG shadow-md mt-6 md:mt-0 tracking-wide md:justify-self-end w-full items-end md:w-32 self-end md:self-start py-3 rounded-[10px] text-white font-bold hover:opacity-70 hover:duration-300 '>Convert</button>
+            <button className='bg-covertBG shadow-md mt-6 md:mt-0 tracking-wide md:justify-self-end w-full items-end md:w-32 self-end md:self-start py-3 rounded-[10px] text-white font-bold hover:opacity-70 hover:duration-300 ' onClick={() => refetch()}>Convert</button>
             {/* Convertation Button End*/}
           </div>
         </div>    

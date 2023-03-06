@@ -3,10 +3,24 @@ import Chart from './Pages/Chart'
 import Date from './Pages/Date'
 import Navbar from './components/Navbar'
 import Convert from './Pages/Convert'
-
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 const App = () => {
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+        enabled: false,
+        
+
+      },
+
+    },
+  })
+
   return (
+    <QueryClientProvider client={queryClient} >
     <Router>
       <div>
         <Navbar />
@@ -22,6 +36,7 @@ const App = () => {
         </div>
       </div>
     </Router>
+    </QueryClientProvider>
   )
 }
 
