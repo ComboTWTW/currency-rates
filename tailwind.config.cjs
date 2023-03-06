@@ -14,6 +14,7 @@ module.exports = {
         "cardBG": '#e7e9ec',
         "bTextColor": '#141e37',
         "covertBG": '#0071eb',
+        
       }
     },
     screens: {

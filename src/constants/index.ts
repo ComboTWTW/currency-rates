@@ -25,6 +25,7 @@ export const selectStyles = {
 
     control: (baseStyles:any, state:any) => ({
       ...baseStyles,
+      text: "black",
       backgroundColor: "white",
       borderRadius: "10px",
       outline: "none",

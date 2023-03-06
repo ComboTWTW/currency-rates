@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import { styles, options, selectStyles } from '../constants/index'
 import compare from '../assets/compare.jpg'
 import React from 'react'
@@ -27,10 +27,7 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
     let oldTo = to;
     setFrom(oldTo);
     setTo(oldFrom);
-    
-
   }
-
 
   return <Fragment>
     
@@ -41,7 +38,9 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
         className='shadow-md rounded-[10px]'
         styles={selectStyles}
         classNamePrefix="select"
-        defaultValue={options[0]}
+        defaultValue={options.filter(function(option) {
+          return option.value === 'USD';
+        })}
         value={options.filter(function(option) {
           return option.value === from;
         })}
@@ -71,7 +70,9 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
         value={options.filter(function(option) {
           return option.value === to;
         })}
-        defaultValue={options[0]}
+        defaultValue={options.filter(function(option) {
+          return option.value === 'EUR';
+        })}
         isClearable={true}
         isSearchable={true}
         name="to"
