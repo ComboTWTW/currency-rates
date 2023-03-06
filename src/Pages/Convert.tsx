@@ -35,9 +35,9 @@ const Convert = () => {
               <div className="">Loading</div> :
               isSuccess && !isRefetching && 
             <div className="flex flex-col w-full gap-3 justify-self-start md:w-[40%]">
-              <div className="flex flex-row items-center gap-1 md:gap-3">
+              <div className="flex flex-col items-start md:flex-row md:items-center gap-1 md:gap-3">
                 <p className='font-semibold text-gray-700 shrink-0'>{amount} {from} <span className='md:ml-3'>=</span></p>
-                <h2 className='font-bold text-black text-2xl justify-self-end shrink-0'>{isSuccess && (data.result).toString().slice(0, -3)} {to}</h2>
+                <h2 className='font-bold text-black text-2xl justify-self-end shrink-0'>{isSuccess && data.result} {to}</h2>
               </div>
               <h3 className='font-normal text-gray-700'>1 {from} = {isSuccess && data.info.rate} {to}</h3>
             </div>
