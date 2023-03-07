@@ -3,6 +3,7 @@ import Amount from '../components/Amount';
 import { useState } from 'react';
 import { apiConvert } from '../api/api';
 import { useQuery } from 'react-query'
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Convert = () => {
 
@@ -25,7 +26,7 @@ const Convert = () => {
   const { isLoading, isSuccess, data, refetch, isRefetching } = useQuery(['conv'], () => apiConvert(to, from, amount));
   isSuccess && console.log(data);
   
-  
+
   return (
     <div className='container flex flex-col items-center mt-24 px-4 mb-96'>
         <h1 className='text-black font-bold text-3xl'>Currency Converter</h1>
@@ -44,7 +45,7 @@ const Convert = () => {
             {/* Result Block Start */}
             {
               isLoading || isRefetching  ? 
-              <div className="">Loading</div> :
+              <div className=""> <CircularProgress /></div> :
               isSuccess && !isRefetching && 
             <div className="flex flex-col w-full gap-3 justify-self-start md:w-[40%]">
               <div className="flex flex-col items-start md:flex-row md:items-center gap-1 md:gap-2">
