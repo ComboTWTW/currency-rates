@@ -23,10 +23,10 @@ const Convert = () => {
     amountStat: '',
   })
 
-  const { isLoading, isSuccess, data, refetch, isRefetching } = useQuery(['conv'], () => apiConvert(to, from, amount));
+  const { isLoading, isSuccess, data, refetch, isRefetching, isFetchedAfterMount } = useQuery(['conv'], () => apiConvert(to, from, amount));
   isSuccess && console.log(data);
   
-
+  console.log("isFetched is " + isFetchedAfterMount)
   return (
     <div className='container flex flex-col items-center mt-28 px-4 mb-96'>
         <h1 className='text-black font-bold text-3xl'>Currency Converter</h1>
@@ -45,14 +45,14 @@ const Convert = () => {
             {/* Result Block Start */}
             {
               isLoading || isRefetching  ? 
-              <div className=""> <CircularProgress /></div> :
+              <div className="justify-self-start"> <CircularProgress /></div> :
               isSuccess && !isRefetching && 
-            <div className="flex flex-col w-full gap-3 justify-self-start md:w-[40%]">
+            <div className={`flex flex-col w-full gap-3 justify-self-start md:w-[40%] ${!isFetchedAfterMount && '-z-10'}`}>
               <div className="flex flex-col items-start md:flex-row md:items-center gap-1 md:gap-2">
                 <p className='font-semibold text-gray-700 shrink-0'>{statData.amountStat} {statData.fromStat} <span className='md:ml-1'>=</span></p>
-                <h2 className='font-bold text-black text-2xl justify-self-end shrink-0'>{isSuccess && data.result} {statData.toStat}</h2>
+                <h2 className='font-bold text-black text-2xl justify-self-end shrink-0'>{data.result} {statData.toStat}</h2>
               </div>
-              <h3 className='font-normal text-gray-700'>1 {statData.fromStat} = {isSuccess && data.info.rate} {statData.toStat}</h3>
+              <h3 className='font-normal text-gray-700'>1 {statData.fromStat} = {data.info.rate} {statData.toStat}</h3>
             </div>
             }
             {/* Result Block End */}
