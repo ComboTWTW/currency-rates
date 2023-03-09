@@ -28,7 +28,7 @@ const Convert = () => {
   
 
   return (
-    <div className='container flex flex-col items-center mt-24 px-4 mb-96'>
+    <div className='container flex flex-col items-center mt-28 px-4 mb-96'>
         <h1 className='text-black font-bold text-3xl'>Currency Converter</h1>
 
         {/* Main White Card Start*/}
