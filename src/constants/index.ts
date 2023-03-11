@@ -5,11 +5,11 @@ export const links = [
     },
     {
         tittle: "Chart",
-        id: "chart"    
+        id: "/chart"    
     },
     {
         tittle: "Date",
-        id: "date"    
+        id: "/date"    
     },
 ]
 

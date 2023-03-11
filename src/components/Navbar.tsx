@@ -25,7 +25,7 @@ const Navbar = () => {
           {/* NavabrLinks for Desktop Start*/}
           <ul className='md:flex md:flex-row md:gap-16 hidden'>
             {links.map((link, key) => (
-              <NavLink to={`${link.id}`}><li key={link.id} className='text-white py-1 px-4 text-lg rounded-[10px] hover:bg-white hover:bg-opacity-30 hover:py-1 hover:px-4 hover:cursor-pointer duration-200'>{link.tittle}</li></NavLink>
+              <NavLink reloadDocument to={`${link.id}`}><li key={link.id} className='text-white py-1 px-4 text-lg rounded-[10px] hover:bg-white hover:bg-opacity-30 hover:py-1 hover:px-4 hover:cursor-pointer duration-200'>{link.tittle}</li></NavLink>
             ))}
           </ul>
           {/* NavabrLinks for Desktop End*/}
@@ -40,7 +40,7 @@ const Navbar = () => {
         {toggle ? (
           <div className={`${styles.navbar} container translate-y-[90px]`}>
             {links.map((link, key) => (
-              <NavLink to={`${link.id}`}><li key={link.id} onClick={() => setToggle(false)} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'>{link.tittle}</li></NavLink>
+              <NavLink reloadDocument to={`${link.id}`}><li key={link.id} onClick={() => setToggle(false)} className='text-white list-none font-semibold text-xl cursor-pointer tracking-wider'>{link.tittle}</li></NavLink>
             ))}
           </div>
         ) : 
