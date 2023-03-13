@@ -41,7 +41,7 @@ const CalendarComp = ({setDate}:Prop) => {
             desktopModeMediaQuery={'@media (min-width:768px)'}
             minDate={dayjs('2000-01-01')}
             maxDate={dayjs()}
-            onChange={(x, event) => setFechaDesde(x)}
+            onChange={(x) => setFechaDesde(x)}
             />
           
          
