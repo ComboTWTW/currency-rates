@@ -29,13 +29,11 @@ const CalendarComp = () => {
                 '&:hover': {
                   outline: 'none',
                 },
-                '&:focus': {
-                  outline: 'none',
-                },
               }
               
             }} className="shadow-md" defaultValue={dayjs()} 
             desktopModeMediaQuery={'@media (min-width:768px)'}
+            minDate={dayjs('2000-01-01')}
             />
           
          

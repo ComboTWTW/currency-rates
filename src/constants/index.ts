@@ -4,12 +4,12 @@ export const links = [
         id: "/"    
     },
     {
-        tittle: "Chart",
-        id: "/chart"    
-    },
-    {
         tittle: "Date",
         id: "/date"    
+    },
+    {
+        tittle: "GitHub",
+        id: 'github'
     },
 ]
 
