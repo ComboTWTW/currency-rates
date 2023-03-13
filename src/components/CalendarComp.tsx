@@ -5,6 +5,7 @@ import dayjs from 'dayjs';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import Popper from '@mui/material';
 
 
 const CalendarComp = () => {
@@ -33,7 +34,9 @@ const CalendarComp = () => {
                 },
               }
               
-            }} className="shadow-md" defaultValue={dayjs()} />
+            }} className="shadow-md" defaultValue={dayjs()} 
+            desktopModeMediaQuery={'@media (min-width:768px)'}
+            />
           
          
 
