@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { apiConvert } from '../api/api';
 import { useQuery } from 'react-query'
 import CircularProgress from '@mui/material/CircularProgress';
-import Calendar from '../components/Calendar';
+import CalendarComp from '../components/CalendarComp';
 
 const Chart = () => {
   const [date, setDate] = useState<object>({
@@ -36,7 +36,7 @@ const Chart = () => {
         <div className="bg-white container flex flex-col mt-10 rounded-[10px] px-6 py-6 shadow-lg md:py-12 md:px-10">
           {/* ConvertationBlock Start */}
           <div className="flex flex-col md:flex-row container gap-6">
-            <Calendar />
+            <CalendarComp />
             {/* FromTo Component */}
             <FromTo setFrom={setFrom} setTo={setTo} from={from} to={to} />   
           </div>

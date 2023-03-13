@@ -31,7 +31,7 @@ const Navbar = () => {
           {/* NavabrLinks for Desktop End*/}
 
           {/* Burger Start*/}
-          <HamburgerBoring barColor='white' className=" md:hidden" buttonWidth={28} isActive={toggle}  toggleButton={() => setToggle(!toggle)}/>  
+          <div className="md:hidden"><HamburgerBoring barColor='white' className="md:hidden" buttonWidth={28} isActive={toggle}  toggleButton={() => setToggle(!toggle)}/>  </div>
           {/* Burger End*/}
 
         </div>

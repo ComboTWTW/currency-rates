@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { apiConvert } from '../api/api';
 import { useQuery } from 'react-query'
 import CircularProgress from '@mui/material/CircularProgress';
+import CalendarComp from '../components/CalendarComp';
 
 const Date = () => {
   
@@ -29,14 +30,14 @@ const Date = () => {
   console.log("isFetched is " + isFetchedAfterMount)
   return (
     <div className='container flex flex-col items-center mt-28 px-4 mb-96'>
-        <h1 className='text-black font-bold text-3xl'>Currency Converter</h1>
+        <h1 className='text-black font-bold text-3xl'>Currency Rates in Specific Date</h1>
 
         {/* Main White Card Start*/}
         <div className="bg-white container flex flex-col mt-10 rounded-[10px] px-6 py-6 shadow-lg md:py-12 md:px-10">
           {/* ConvertationBlock Start */}
           <div className="flex flex-col md:flex-row container gap-6">
             {/* Amount Component */}
-            <Amount from={from} setAmount={setAmount}/>
+            <CalendarComp />
             {/* FromTo Component */}
             <FromTo setFrom={setFrom} setTo={setTo} from={from} to={to} />   
           </div>
