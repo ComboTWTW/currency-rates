@@ -1,16 +1,22 @@
-import { useState } from "react"
 import { styles } from '../constants/index'
-import * as React from 'react';
 import dayjs from 'dayjs';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import Popper from '@mui/material';
 
 
-const CalendarComp = () => {
+interface Prop {
+  setDate: any;
+}
 
+
+
+const CalendarComp = ({setDate}:Prop) => {
   
+  function setFechaDesde(x:any){
+    setDate(JSON.stringify(x).substring(1, 11));
+}
+ 
   return (
     <div className=" flex flex-col relative gap-2 md:min-w-0 md:flex-1">
         <h2 className={`${styles.cardBold}`}>Date</h2>
@@ -34,6 +40,8 @@ const CalendarComp = () => {
             }} className="shadow-md" defaultValue={dayjs()} 
             desktopModeMediaQuery={'@media (min-width:768px)'}
             minDate={dayjs('2000-01-01')}
+            maxDate={dayjs()}
+            onChange={(x, event) => setFechaDesde(x)}
             />
           
          

@@ -16,10 +16,13 @@ export const apiConvert = (to:string, from:string, amount:string):any => {
     .then((data) => data)
 }
 
+export const apiDate = (to:string, from:string, date:any):any => {
+  const link = `https://api.apilayer.com/fixer/${date}?symbols=${to}&base=${from}`;
+
+  fetch(link, requestOptions)
+  .then(response => response.json())
+  .then((data) => data)
+}
 
 
-/* export const apiDate = (date, symbols, base) => {
-
-
-} */
 
