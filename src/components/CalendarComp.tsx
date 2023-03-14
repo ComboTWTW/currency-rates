@@ -7,14 +7,16 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 interface Prop {
   setDate: any;
+  from: string;
+  to: string,
 }
 
 
 
-const CalendarComp = ({setDate}:Prop) => {
+const CalendarComp = ({setDate, from, to}:Prop) => {
   
   function setFechaDesde(x:any){
-    setDate(JSON.stringify(x).substring(1, 11));
+    setDate(JSON.stringify(x.add(1, 'day')).substring(1, 11));
 }
  
   return (
@@ -37,10 +39,10 @@ const CalendarComp = ({setDate}:Prop) => {
                 },
               }
               
-            }} className="shadow-md" defaultValue={dayjs()} 
+            }} className="shadow-md" defaultValue={dayjs().subtract(1, 'day')} 
             desktopModeMediaQuery={'@media (min-width:768px)'}
-            minDate={dayjs('2000-01-01')}
-            maxDate={dayjs()}
+            minDate={dayjs(`${(from === 'BTC' || to === "BTC") ? "2013-01-01" : "2000-01-01"}`)}
+            maxDate={dayjs().subtract(1, 'day')}
             onChange={(x) => setFechaDesde(x)}
             />
           
