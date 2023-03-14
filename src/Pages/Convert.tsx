@@ -58,7 +58,7 @@ const Convert = () => {
             {/* Result Block End */}
 
             {/* Convertation Button Start*/}
-            <button className='bg-covertBG shadow-md mt-6 md:mt-0 tracking-wide md:justify-self-end w-full items-end md:w-32 self-end md:self-start py-3 rounded-[10px] text-white font-bold hover:opacity-70 hover:duration-300 ' onClick={() => {
+            <button disabled={isLoading ? true : false} className='bg-covertBG shadow-md mt-6 md:mt-0 tracking-wide md:justify-self-end w-full items-end md:w-32 self-end md:self-start py-3 rounded-[10px] text-white font-bold hover:opacity-70 hover:duration-300 ' onClick={() => {
               setStatData({amountStat: amount, fromStat: from, toStat: to})
               refetch()
               }}>Convert</button>

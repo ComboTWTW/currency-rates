@@ -10,9 +10,7 @@ const Date = () => {
   
   const [from, setFrom] = useState<string>('USD');
   const [to, setTo] = useState<string>('EUR');
-  const [date, setDate] = useState<string>(JSON.stringify(dayjs()).substring(1, 11));
-
-
+  const [date, setDate] = useState(dayjs().subtract(1, 'day'));
 
   const [statData, setStatData] = useState({
     fromStat: '',
@@ -20,7 +18,7 @@ const Date = () => {
     dateStat: '',
   })
 
-  const { isLoading, isSuccess, data, refetch, isRefetching, isFetchedAfterMount } = useQuery(['conv'], () => apiDate(to, from, date));
+  const { isLoading, isSuccess, data, refetch, isRefetching, isFetchedAfterMount } = useQuery(['conv'], () => apiDate(to, from, date.format("YYYY-MM-DD")));
   console.log("date is " + date)
   isSuccess && console.log(data.rates[`${to}`]);
 
@@ -58,8 +56,8 @@ const Date = () => {
             {/* Result Block End */}
 
             {/* Convertation Button Start*/}
-            <button className='bg-covertBG shadow-md mt-6 md:mt-0 tracking-wide md:justify-self-end w-full items-end md:w-32 self-end md:self-start py-3 rounded-[10px] text-white font-bold hover:opacity-70 hover:duration-300 ' onClick={() => {
-              setStatData({dateStat: date, fromStat: from, toStat: to})
+            <button disabled={isLoading ? true : false} className='bg-covertBG shadow-md mt-6 md:mt-0 tracking-wide md:justify-self-end w-full items-end md:w-32 self-end md:self-start py-3 rounded-[10px] text-white font-bold hover:opacity-70 hover:duration-300 ' onClick={() => {
+              setStatData({dateStat: date.format('DD/MM/YYYY'), fromStat: from, toStat: to})
               refetch()
               }}>Convert</button>
             {/* Convertation Button End*/}

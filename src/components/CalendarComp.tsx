@@ -16,7 +16,7 @@ interface Prop {
 const CalendarComp = ({setDate, from, to}:Prop) => {
   
   function setFechaDesde(x:any){
-    setDate(JSON.stringify(x.add(1, 'day')).substring(1, 11));
+    setDate(x);
 }
  
   return (
