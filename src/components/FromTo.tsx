@@ -1,9 +1,7 @@
 import { Fragment } from 'react'
 import { styles, options, selectStyles } from '../constants/index'
 import compare from '../assets/compare.jpg'
-import React from 'react'
 import Select from 'react-select'
-import { useQuery } from 'react-query'
 
 interface Prop {
   setFrom: any;
@@ -11,7 +9,6 @@ interface Prop {
   from: string;
   to: string;
 }
-
 
 const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
 
@@ -29,8 +26,6 @@ const FromTo = ({ setFrom, setTo, from, to }:Prop) => {
     setFrom(oldTo);
     setTo(oldFrom);
   }
-
-  
 
   return <Fragment>
     

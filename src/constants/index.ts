@@ -21,6 +21,22 @@ export const styles = {
     compareButton: 'rounded-full flex justify-center items-center w-[50px] h-[50px] bg-white border border-[#dddddd] cursor-pointer active:border-covertBG mt-3',
 }
 
+export const calendarStyles = {
+    '.MuiInputBase-input': {padding: "13px",
+    borderRadius: '10px',
+    outline: 'none',
+  },
+    borderRadius: '10px',
+    outline: 'none',
+    '.MuiOutlinedInput-root': {
+      borderRadius: '10px',
+      borderColor: '#ddd',
+      '&:hover': {
+        outline: 'none',
+      },
+    }
+  }
+
 export const selectStyles = {
 
     control: (baseStyles:any, state:any) => ({
