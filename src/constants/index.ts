@@ -1,11 +1,11 @@
 export const links = [
     {
         tittle: "Convert",
-        id: "/currency-rates"    
+        id: "/"    
     },
     {
         tittle: "Date",
-        id: "/currency-rates/date"    
+        id: "/date"    
     },
     {
         tittle: "GitHub",

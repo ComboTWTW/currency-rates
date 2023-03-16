@@ -17,13 +17,13 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient} >
-    <Router basename="/currency-rates">
+    <Router >
       <div>
         <Navbar />
         <div className="flex flex-col items-center min-h-screen w-full bg-cardBG">
           <Routes>
-            <Route path={'/currency-rates'} element={<Convert />}/>
-            <Route path={'/currency-rates/date'} element={<Date />}/>
+            <Route path={'/'} element={<Convert />}/>
+            <Route path={'/date'} element={<Date />}/>
             
             <Route path={'*'} element={<h1 className='text-black mt-24 text-center font-bold text-3xl'>Page not Found</h1>}/>
           </Routes>
