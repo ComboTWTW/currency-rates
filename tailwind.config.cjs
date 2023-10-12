@@ -15,6 +15,7 @@ module.exports = {
         "bTextColor": '#141e37',
         "covertBG": '#0071eb',
         
+        
       }
     },
     screens: {
